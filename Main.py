@@ -1,17 +1,17 @@
 class Employee:
     employees = []
 
-    def create_employee(name, age, employee_id, department):
+    def create_employee(self,name, age, employee_id, department):
         employee = {"name": name, "age": age, "id": employee_id, "department": department}
         Employee.employees.append(employee)
 
-    def retrieve_employee(employee_id):
+    def retrieve_employee(self,employee_id):
         for employee in Employee.employees:
             if employee["id"] == employee_id:
                 return employee
         return None
 
-    def delete_employee(employee_id):
+    def delete_employee(self,employee_id):
         for employee in Employee.employees:
             if employee["id"] == employee_id:
                 Employee.employees.remove(employee)
